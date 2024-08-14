@@ -1,6 +1,4 @@
-import {
-  CloudIcon, DocumentIcon, FolderIcon
-} from "@heroicons/react/24/solid";
+import { CloudIcon, DocumentIcon, FolderIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 
@@ -20,20 +18,20 @@ const Nav = ({ sidebarOutsideClick }) => {
     setSubMenuToggleStatus(!subMenuToggleStatus);
   };
 
-   //if menu has chile menu then  use seperate array
-   const childMenu = [
+  //if menu has chile menu then  use seperate array
+  const childMenu = [
     {
       subMenuTitle: "child One",
-      linkHref: "/"
+      linkHref: "/",
     },
     {
       subMenuTitle: "child Two",
-      linkHref: "/"
+      linkHref: "/",
     },
     {
       subMenuTitle: "child Three",
-      linkHref: "/"
-    }
+      linkHref: "/",
+    },
   ];
 
   useEffect(() => {
@@ -45,39 +43,36 @@ const Nav = ({ sidebarOutsideClick }) => {
   return (
     <>
       <nav className="flex flex-col mx-4 my-6 space-y-4">
-       
-
         <NavItem
-          hrefLink='/category'
+          hrefLink="/category"
           sidebarStatus={sidebarStatus}
           menuTitle="Category"
           subMenu={false}
           subMenuArray={null}
         >
           <CloudIcon className="h-10" />
-        </NavItem> 
+        </NavItem>
 
         <NavItem
-          hrefLink='/sub-category'
+          hrefLink="/sub-category"
           sidebarStatus={sidebarStatus}
           menuTitle="Sub-Category"
           subMenu={false}
           subMenuArray={null}
         >
           <DocumentIcon className="h-10" />
-        </NavItem> 
+        </NavItem>
 
         {/* this menu has child Menu     */}
         <NavItem
-          hrefLink='#'
+          hrefLink="#"
           sidebarStatus={sidebarStatus}
           menuTitle="Chiled Menu"
           subMenu={true}
           subMenuArray={childMenu}
         >
           <FolderIcon className="h-10" />
-        </NavItem> 
-       
+        </NavItem>
       </nav>
     </>
   );
