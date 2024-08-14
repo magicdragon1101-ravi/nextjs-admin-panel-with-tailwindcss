@@ -36,3 +36,4 @@ yarn-error.log*
 
 .git.zip
 package-old.json
+package-lock.json
