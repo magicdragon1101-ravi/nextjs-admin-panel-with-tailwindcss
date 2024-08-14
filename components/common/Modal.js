@@ -16,7 +16,7 @@ const Modal = ({ modal, setModal, headerTitle }) => {
   };
 
   const handleSubmit = () => {
-     // Reset modal state
+    // Reset modal state
     setModal(false);
   };
 
@@ -32,10 +32,12 @@ const Modal = ({ modal, setModal, headerTitle }) => {
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="modal-overlay"></div>
           <div className="modal-container bg-white mx-auto rounded-lg shadow-lg overflow-y-auto w-[600px]">
-            
             <div className="modal-header bg-purple-600 relative py-2">
               <p className="text-lg font-bold text-center text-white">{headerTitle}</p>
-              <button className="close-button absolute top-2 right-2 w-6 h-6 bg-gray-400 rounded-full" onClick={() => setModal(false)}>
+              <button
+                className="close-button absolute top-2 right-2 w-6 h-6 bg-gray-400 rounded-full"
+                onClick={() => setModal(false)}
+              >
                 <span className="text-white">&times;</span>
               </button>
             </div>
@@ -115,7 +117,6 @@ const Modal = ({ modal, setModal, headerTitle }) => {
             .modal-content {
               max-height: calc(100vh - 4rem);
             }
-           
           `}</style>
         </div>
       )}
