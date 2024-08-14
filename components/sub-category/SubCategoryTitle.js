@@ -22,12 +22,7 @@ const SubCategoryTitle = () => {
             stroke="currentColor"
             className="flex-shrink-0 h-6 w-6 text-white -ml-1 mr-2"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
           </svg>
           Create new Category
         </button>
